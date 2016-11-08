@@ -1,0 +1,16 @@
+{
+    "name": "robwittman/teespring-sdk",
+    "description": "PHP Wrapper for communicating with the Teespring API",
+    "authors": [
+        {
+            "name": "Rob Wittman",
+            "email": "rob@ihsdigital.com"
+        }
+    ],
+    "require": {},
+    "autoload" : {
+        "psr-4" : {
+            "Teespring\\" : "src"
+        }
+    }
+}
