@@ -11,7 +11,7 @@ class Client {
 
     protected $handle;
 
-    public function __construct($token) {
+    public function __construct($token = null) {
         $this->handle = new Guzzle([
             'base_uri' => \Teespring\Api::API_ROOT,
             'query' => [
@@ -27,8 +27,7 @@ class Client {
             $params
         );
         $response = $this->handle->request($method, $url, [
-            'query' => $params,
-            'debug' => true
+            'query' => $params
         ]);
         return json_decode($response->getBody());
     }
